@@ -5,6 +5,7 @@ import './App.css'
 import SplideCarousel from './components/SplideCarousel'
 import Navbar from './components/Navbar'
 import React from 'react'
+import AccessSplideCarousel from './components/AccessSplideCarousel'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -12,9 +13,15 @@ function App() {
   return (
     <>
       <Navbar/>
-      <h1 className="text-3xl font-bold m-6 text-black">All types of Engines and Accessories available</h1>
-      
+      <div className="dark:bg-gray-900 mt-0">
+        <hr className='text-white'/>
+      <h1 className="text-3xl font-bold m-6 text-white">All types of Engines</h1>
       <SplideCarousel/>
+      <hr className='text-white'/>
+      <h1 className="text-3xl font-bold m-6 text-white">Accessories</h1>
+      <AccessSplideCarousel />
+      </div>
+
     </>
   )
 }
